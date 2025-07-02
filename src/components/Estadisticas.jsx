@@ -6,12 +6,11 @@ import { FaFlagCheckered, FaChartBar } from 'react-icons/fa';
 export default function Estadisticas({ registros }) {
   const [periodo, setPeriodo] = useState('semana');
   const [meta, setMeta] = useState(() => {
-    // Leer meta guardada o valor por defecto 10
     const guardada = localStorage.getItem('metaReciclaje');
     return guardada ? Number(guardada) : 10;
   });
 
-  // Guardar meta en localStorage cada vez que cambie
+// Guardar meta en localStorage
   React.useEffect(() => {
     localStorage.setItem('metaReciclaje', meta);
   }, [meta]);
