@@ -30,4 +30,4 @@ Incluye estadísticas visuales por semana o mes y muestra la calidad del aire en
 
 1. Clona el repositorio:  
 ```bash
-git clone https://github.com/tu-usuario/gestion-reciclaje.git
+git clone https://github.com/Chupalla11/ReciclajeHogar.git
