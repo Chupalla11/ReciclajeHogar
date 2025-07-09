@@ -17,7 +17,6 @@ export default function App() {
     idEditar: null,
   });
 
-// Guardar en localStorage
   useEffect(() => {
     localStorage.setItem('registrosReciclaje', JSON.stringify(registros));
   }, [registros]);
@@ -42,7 +41,7 @@ export default function App() {
       );
     } else {
 
-// Crear nuevo registro
+
       setRegistros(prev => [
         ...prev,
         {
@@ -54,7 +53,7 @@ export default function App() {
       ]);
     }
 
-// Limpiar formulario
+
     setForm({ tipo: tiposMaterial[0], cantidad: '', fecha: new Date().toISOString().slice(0, 10), idEditar: null });
   };
 
