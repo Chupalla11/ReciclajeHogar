@@ -1,12 +1,33 @@
-# React + Vite
+# Gestión de Reciclaje en Hogares
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para que hogares lleven un registro de sus hábitos de reciclaje.  
+Permite agregar, editar y eliminar registros de reciclaje indicando tipo de material, cantidad y fecha.  
+Incluye estadísticas visuales por semana o mes y muestra la calidad del aire en Puerto Montt.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- CRUD completo con almacenamiento en Local Storage.  
+- Visualización de estadísticas con gráficos interactivos.  
+- Selección y edición de metas semanales o mensuales.  
+- Consulta de calidad del aire en Puerto Montt usando API pública.  
+- Diseño responsivo y amigable.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tecnologías usadas
+
+- React  
+- Tailwind CSS  
+- Recharts (para gráficos)  
+- date-fns (manejo de fechas)  
+- API pública de calidad del aire Open-Meteo
+
+---
+
+## Instalación y ejecución
+
+1. Clona el repositorio:  
+```bash
+git clone https://github.com/Chupalla11/ReciclajeHogar.git
