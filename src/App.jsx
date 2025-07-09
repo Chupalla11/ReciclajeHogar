@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CalidadAire from './components/CalidadAire';
+import CalidadAireOpenAQ from './components/CalidadAireOPENAQ';
 import Estadisticas from './components/Estadisticas';
 
 const tiposMaterial = ['Plástico', 'Papel', 'Vidrio', 'Metal', 'Orgánico', 'Otro'];
@@ -17,7 +17,7 @@ export default function App() {
     idEditar: null,
   });
 
-// Guardar en localStorage
+  // Guardar en localStorage
   useEffect(() => {
     localStorage.setItem('registrosReciclaje', JSON.stringify(registros));
   }, [registros]);
@@ -36,13 +36,12 @@ export default function App() {
     }
 
     if (form.idEditar !== null) {
-        // Actualizar registro
+      // Actualizar registro
       setRegistros(prev =>
         prev.map(r => (r.id === form.idEditar ? { ...r, tipo: form.tipo, cantidad: cantidadNum, fecha: form.fecha } : r))
       );
     } else {
-
-// Crear nuevo registro
+      // Crear nuevo registro
       setRegistros(prev => [
         ...prev,
         {
@@ -54,7 +53,7 @@ export default function App() {
       ]);
     }
 
-// Limpiar formulario
+    // Limpiar formulario
     setForm({ tipo: tiposMaterial[0], cantidad: '', fecha: new Date().toISOString().slice(0, 10), idEditar: null });
   };
 
@@ -74,7 +73,7 @@ export default function App() {
     <div className="min-h-screen bg-green-50 p-4 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center text-green-800">Gestión de Reciclaje en Hogares ♻️</h1>
 
-      <CalidadAire />
+      <CalidadAireOpenAQ />
 
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow mb-8 max-w-xl mx-auto">
         <h2 className="text-xl font-semibold mb-4">Registrar reciclaje</h2>
